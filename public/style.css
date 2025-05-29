@@ -1,50 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 body {
-  background: #0f172a;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111827;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  color: white;
 }
 
 .form-container {
-  background: #1e293b;
+  background-color: #1f2937;
   padding: 30px;
   border-radius: 20px;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 0 15px #06b6d4;
-  text-align: center;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-image: linear-gradient(to right, #6366f1, #06b6d4) 1;
+  transition: 0.3s ease-in-out;
 }
 
-input, textarea {
+.form-container:hover {
+  box-shadow: 0 0 35px rgba(6, 182, 212, 0.5);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+input[type="text"],
+textarea {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
   border: none;
-  resize: none;
+  border-radius: 12px;
+  background-color: #374151;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  background-color: #4b5563;
 }
 
 button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(to right, #6366f1, #06b6d4);
-  color: white;
-  font-size: 16px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  color: #fff;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 12px #06b6d4;
 }
 
 button:hover {
-  opacity: 0.9;
+  background: linear-gradient(to right, #2563eb, #0891b2);
+  transform: scale(1.03);
 }
 
 #status {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 14px;
+  color: #22c55e;
+  text-align: center;
+  transition: 0.3s ease;
 }
